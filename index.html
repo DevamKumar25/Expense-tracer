@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense-Tracer-App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styling for background image */
+        body {
+            background-image: url('pic.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; 
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-6 max-w-md">
+        <h1 class="text-3xl font-bold text-center text-white mb-6">Expense Tracer</h1>
+        
+        <!-- Expense form -->
+        <form id="expense-form" class="bg-white p-4 rounded-md shadow-md mb-4">
+            <input class="w-full p-3 mb-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="text"
+                id="expense-name"
+                placeholder="Expense name"
+                required
+            />
+            <input class="w-full p-3 mb-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="number"
+                id="expense-amount"
+                placeholder="Amount"
+                required
+            />
+            <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Add Expense</button>
+        </form>
+        
+        <!-- Expense list -->
+        <ul id="expense-list" class="space-y-4">
+            <!-- Expenses will be dynamically added here-->
+        </ul>
+
+        <!-- Total amount -->
+        <div class="mt-6 bg-white p-4 rounded-md shadow-md">
+            <h3 class="text-lg font-semibold text-gray-800">Total: $<span id="total-amount" class="font-bold">0.00</span></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
